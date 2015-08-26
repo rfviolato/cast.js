@@ -1,2 +1,2 @@
 # cast.js
-Javascript events system
+Javascript simple events system inspired on angular.js' one.
