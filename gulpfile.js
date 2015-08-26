@@ -6,7 +6,6 @@ var del = require('del');
 
 var projectFile = 'cast';
 
-
 var port = 4000;
 
 gulp.task('express', function(){
