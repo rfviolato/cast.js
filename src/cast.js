@@ -12,11 +12,28 @@
 		this.$$listeners = [];
 	}
 
-	function $on(){
-		
+	function $on(name, triggerFn){
+		var event = {
+			name: name,
+			trigger: triggerFn
+		};
+
+		this.$$listeners.push(event);
+
+		return _unregister;
+
+		function _unregister(){
+			
+		}
 	}
 
-	function $broadcast(){
-		
+	function $broadcast(name, data){
+		this.$$listeners.forEach(_searchListener);
+
+		function _searchListener(listener){
+			if(listener.name === name){
+				listener.trigger(data);
+			}
+		}
 	}
 })(window, document);
