@@ -41,7 +41,7 @@ cast.$broadcast('my-custom-event', data);
 
 #### Unsubscribing events
 
-Unsubscribing from events wroks just like the angular.js' way, the `$on` method will return the respective unsubscribe function for that event.
+Unsubscribing from events works just like the angular.js' way, the `$on` method will return the respective unsubscribe function for that event.
 
 ```javascript
 var unsubscribe = cast.$on('my-custom-event', callbackFn);
