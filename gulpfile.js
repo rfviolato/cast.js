@@ -25,12 +25,13 @@ gulp.task('clean:dest', function(cb){
 
 gulp.task('build', ['clean:dest'], function(){
 
-  return gulp.src('src' + projectFile + '.js')
+  return gulp.src('src/' + projectFile + '.js')
            .pipe(gulp.dest('dest'))
+           .pipe(uglify())
            .pipe(rename(function(path){
              path.extname = ".min.js";
            }))
-           .pipe(gulp.dest('dest/js'));
+           .pipe(gulp.dest('dest'));
 
 });
 
