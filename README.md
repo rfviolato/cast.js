@@ -25,7 +25,7 @@ Use the method `$on` to subscribe an event with a given name:
 ```javascript
 cast.$on('my-custom-event', function(data) {
   console.log('Event fired!');
-  conole.log('data:', data);
+  console.log('data:', data);
 });
 ```
 
