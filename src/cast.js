@@ -1,3 +1,10 @@
+/*
+*
+* Cast.js - Javascript simple events system inspired on angular.js' one.
+* Created by Rafael Violato - http://rviolato.com
+*
+*/
+
 (function(){
 	'use strict';
 
@@ -13,17 +20,17 @@
 	}
 
 	function $on(name, triggerFn){
+		var self = this;
 		var event = {
 			name: name,
 			trigger: triggerFn
 		};
-
-		this.$$listeners.push(event);
+		var index = this.$$listeners.push(event);
 
 		return _unregister;
 
 		function _unregister(){
-			
+			self.$$listeners.splice(index-1, 1);
 		}
 	}
 

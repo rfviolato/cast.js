@@ -1,4 +1,4 @@
-cast.$on('test', function(data){
+var unreg = cast.$on('test', function(data){
 	console.log('data:', data);
 });
 
@@ -7,3 +7,5 @@ function clickTest(){
 		message: 'Test success',
 	});
 }
+
+unreg();
